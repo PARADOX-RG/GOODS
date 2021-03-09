@@ -142,7 +142,7 @@
     }
 }
 
-.about{
+.top{
     padding: 196px 60px;
     background-image: url('../images/icons/about-bg.svg');
     background-repeat: no-repeat;
@@ -152,6 +152,7 @@
     }
     &__content{
         max-width: 710px;
+        width: 100%;
     }
     &__title{
         @extend %gilroy-600;
@@ -175,6 +176,7 @@
 .advantages{
     background-image: url('../images/icons/advantages-bg.svg');
     background-repeat: no-repeat;
+    background-position: center top;
     padding: 0 60px 110px;
     &__title{
         margin-bottom: 67px;
@@ -214,6 +216,65 @@
             @extend %gilroy-600;
             
         }
+    }
+}
+
+.work{
+    background: linear-gradient(80.15deg, rgba(242, 242, 242, 0.8) 0%, rgba(242, 242, 242, 0.19) 100%);
+    &__inner{
+        display: flex;
+        padding: 20px;
+    }
+    &__title{
+        @extend %gilroy-600;
+        font-size: 38px;
+        line-height: 45px;
+        padding-top: 90px;
+        margin-bottom: 30px;
+    }
+    &__subtitle{
+        font-size: 20px;
+        line-height: 137.2%;
+        opacity: 0.8;
+        @extend %gilroy-500;
+        margin-bottom: 30px;
+    }
+    &__item{
+        padding-left: 62px;
+        margin-bottom: 40px;
+        position: relative;
+        &::before{
+            content: '';
+            position: absolute;
+            background-repeat: no-repeat;
+            background-position: left center;
+            left: 0;
+            top: 0;
+
+        }
+        &-title{
+            line-height: 102.4%;
+            margin-bottom: 10px;
+        }
+        &-text{
+            font-size: 16px;
+            opacity: 0.7;
+        }
+    }
+    &__item-one::before{
+        background-image: url('../images/icons/work-1.svg');
+        width: 45px;
+        height: 38px;
+    }
+    &__item-two::before{
+        background-image: url('../images/icons/work-2.svg');
+        width: 41px;
+        height: 42px;
+    }
+    &__item-three::before{
+        background-image: url('../images/icons/work-3.svg');
+        width: 45px;
+        height: 46px;
     }
 }
 
