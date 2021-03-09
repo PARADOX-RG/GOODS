@@ -1,6 +1,43 @@
-
-
-
+html,
 body{
-
+    height: 100%;
+}
+body{
+    @extend %gilroy-500;
+    color: #333;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.container{
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+.main{
+    flex-grow: 1;
+}
+.title{
+    @extend %gilroy-600;
+    font-size: 38px;
+    line-height: 45px;
+    text-align: center;
+}
+.partner-btn{
+    @extend %gilroy-600;
+    color: #fff;
+    font-size: 16px;
+    line-height: 19px;
+    background: linear-gradient(50.16deg, #FF2A00 5.83%, #FF9900 100%);
+    padding: 11px 15px;
+    border: 1px solid #000;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.app__box{
+    display: flex;
+    &-link__play{
+        margin-top: 9px;
+        margin-left: 50px;
+    }
 }
