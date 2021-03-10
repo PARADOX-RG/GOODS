@@ -2,6 +2,7 @@
 @import 'fonts';
 @import 'reset';
 @import 'global';
+@import 'libs';
 
 .header{
     &__inner{
@@ -106,7 +107,7 @@
     &__bottom{
         display: flex;
         justify-content: space-between;
-        padding: 25px 60px 37px;
+        padding: 25px 45px 37px;
         &-text{
             @extend %gilroy-500;
             font-size: 14px;
@@ -144,7 +145,7 @@
 
 .top{
     padding: 196px 60px;
-    background-image: url('../images/icons/about-bg.svg');
+    background-image: url('../images/icons/top-bg.svg');
     background-repeat: no-repeat;
     background-position: top center;
     &__inner{
@@ -220,16 +221,22 @@
 }
 
 .work{
+    margin-bottom: 75px;
     background: linear-gradient(80.15deg, rgba(242, 242, 242, 0.8) 0%, rgba(242, 242, 242, 0.19) 100%);
     &__inner{
         display: flex;
-        padding: 20px;
+        background-image: url('../images/icons/work-bg.svg');
+        background-position: top right;
+        background-repeat: no-repeat;
+    }
+    &__content{
+        margin-left: 58px;
     }
     &__title{
         @extend %gilroy-600;
         font-size: 38px;
         line-height: 45px;
-        padding-top: 90px;
+        padding-top: 120px;
         margin-bottom: 30px;
     }
     &__subtitle{
@@ -250,7 +257,6 @@
             background-position: left center;
             left: 0;
             top: 0;
-
         }
         &-title{
             line-height: 102.4%;
@@ -275,6 +281,186 @@
         background-image: url('../images/icons/work-3.svg');
         width: 45px;
         height: 46px;
+    }
+}
+
+.info{
+    background-image: url('../images/icons/info-bg.svg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    &__inner{
+        padding: 0 60px 100px;
+    }
+    
+    &__title{
+        margin-bottom: 60px;
+    }
+    &__content{
+        display: flex;
+        justify-content: space-between;
+    }
+    &__item{
+        max-width: 250px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        position: relative;
+        &:last-child{
+            &::after{
+                display: none;
+            }
+        }
+        &::after{
+            content: '';
+            position: absolute;
+            background-image: url('../images/icons/angel-right.svg');
+            width: 12px;
+            height: 20px;
+            right: -60px;
+            top: 45px;
+        }
+        &-img{
+            width: auto;
+            height: auto;
+            margin-bottom: 20px;
+            position: relative;
+        }
+        &-text{
+            @extend %gilroy-500;
+            font-size: 20px;
+            line-height: 24px;
+            span{
+                @extend %gilroy-700;
+            }
+        }
+    }
+}
+
+.about{
+    background: linear-gradient(80.15deg, rgba(242, 242, 242, 0.8) 0%, rgba(242, 242, 242, 0.19) 100%);
+    &__inner{
+        padding: 0 60px;
+        display: flex;
+        background-image: url('../images/icons/about-bg.svg');
+        background-repeat: no-repeat;
+        background-position: left;    
+    }
+    &__content{
+        max-width: 690px;
+        margin-top: 140px;
+    }
+    &__title{
+        margin-bottom: 30px;
+        @extend %gilroy-600;
+        font-size: 38px;
+        line-height: 45px;
+    }
+    &__text{
+        line-height: 29px;
+        margin-bottom: 20px;
+    }
+    &__btn{
+        margin-top: 12px;
+    }
+}
+
+.details{
+    background-image: url('../images/icons/details-bg.svg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    padding: 150px 60px;
+    &__title{
+        margin-bottom: 67px;
+        @extend %gilroy-600;
+    }
+    &__content{
+        display: flex;
+        justify-content: center;
+    }
+    &__item{
+        max-width: 570px;
+        padding: 30px;
+        box-shadow: 0px 3px 25px rgba(71, 71, 71, 0.1);
+        border-radius: 12px;
+        &-title{
+            margin: 25px 0;
+        }
+        &-text{
+            margin-bottom: 30px;
+        }
+    }
+}
+
+.aside{
+    background: linear-gradient(80.15deg, rgba(242, 242, 242, 0.8) 0%, rgba(242, 242, 242, 0.19) 100%);
+    &__inner{
+        display: flex;
+        padding: 0 60px;
+        background-image: url('../images/icons/aside-bg.svg');
+        background-repeat: no-repeat;
+        background-position: right center;
+    }
+    &__content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        max-width: 600px;
+        margin-left: 40px;
+    }
+    &__title{
+        @extend %gilroy-600;
+        font-size: 38px;
+        line-height: 45px;
+        margin-bottom: 40px;
+    }
+    &__text{
+        font-size: 22px;
+        line-height: 31px;
+        margin-bottom: 40px;
+        span{
+            @extend %gilroy-600;
+        }
+    }
+}
+
+.partners{
+    padding: 110px 60px;
+    &__title{
+        margin-bottom: 70px;
+    }
+    ul.partners__list{
+        margin: 0 auto;
+        
+        max-width: 1100px;
+    }
+    .slick-track{
+        width: 1000px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.details-page{
+    padding: 60px 60px 80px;
+    &__title{
+        margin-bottom: 50px;
+        font-size: 38px;
+        line-height: 45px;
+        @extend %gilroy-600;
+    }
+    &__subtitle{
+        @extend %gilroy-700;
+        font-size: 20px;
+        line-height: 24px;
+        margin-bottom: 20px;
+        
+    }
+    &__text{
+        line-height: 24px;
+        margin-bottom: 20px;
     }
 }
 

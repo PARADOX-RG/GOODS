@@ -12,7 +12,6 @@ body{
 .container{
     max-width: 1440px;
     margin: 0 auto;
-    padding: 0 15px;
 }
 .main{
     flex-grow: 1;
@@ -36,8 +35,20 @@ body{
 }
 .app__box{
     display: flex;
+    margin-left: -8px;
     &-link__play{
         margin-top: 9px;
         margin-left: 50px;
     }
+}
+.btn{
+    @extend %gilroy-600;
+    color: #fff;
+    font-size: 16px;
+    line-height: 19px;
+    background: linear-gradient(50.16deg, #FF2A00 5.83%, #FF9900 100%);
+    padding: 11px 15px;
+    border: 1px solid #000;
+    border-radius: 10px;
+    cursor: pointer;
 }
