@@ -21,6 +21,17 @@ body{
     font-size: 38px;
     line-height: 45px;
     text-align: center;
+    position: relative;
+    &::after{
+        content: '';
+        position: absolute;
+        left: 48%;
+        right: 50%;
+        top: 52px;
+        border-bottom: 2px solid #FF4C02;
+        width: 40px;
+        
+    }
 }
 .partner-btn{
     @extend %gilroy-600;
@@ -31,7 +42,6 @@ body{
     padding: 11px 15px;
     border: 1px solid #000;
     border-radius: 10px;
-    cursor: pointer;
 }
 .app__box{
     display: flex;
@@ -51,4 +61,34 @@ body{
     border: 1px solid #000;
     border-radius: 10px;
     cursor: pointer;
+}
+
+@media (max-width: 1250px){
+    .app__box{
+        display: flex;
+        justify-content: center;
+        
+    }
+}
+@media (max-width: 1100px){
+    .partner-btn{
+        margin-bottom: 20px;
+        
+    }
+}
+@media (max-width: 800px){
+    .title{
+        font-size: 30px;
+        line-height: 30px;
+    }
+}
+@media (max-width: 600px){
+    .app__box-link__play {
+        margin-top: 9px;
+        margin-left: 20px;
+    }
+    .title{
+        font-size: 25px;
+        line-height: 24px;
+    }
 }

@@ -3,25 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>GET GOODS</title>
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
-    <header class="header">
+    <header class="header" id="header">
         <div class="container">
             <div class="header__inner">
                 <a class="header__logo" href="#">
                     <img class="header__logo-img" src="images/icons/logo.svg" alt="logo">
                 </a>
-                <div class="header__box">
+                <button class="header__btn">
+                    <img src="images/icons/menu.svg" alt="">
+                </button>
+                <div class="header__box" id="block">
                     <ul class="header__menu">
+                        <a href="#header" class="header__close" id="close">
+                            <img src="images/icons/close.svg" alt="">
+                        </a>
                         <li class="header__menu-item">
                             <a class="header__menu-link header__menu-link--active" href="#">
                                 Головна
                             </a>
+                            
                         </li>
                         <li class="header__menu-item">
-                            <a class="header__menu-link" href="#">
+                            <a class="header__menu-link" href="details.html">
                                 Доставка та оплата
                             </a>
                         </li>
@@ -36,11 +43,84 @@
                             </a>
                         </li>
                     </ul>
-                    <button class="partner-btn">Стати партнером</button>
+                    <div class="header__content">
+                        <a class="partner-btn popup__link" href="#popup">Стати партнером</a>
+                        <ul class="header__bottom-box">
+                            <li class="header__bottom-item">
+                                <a class="header__bootom-link" href="#">
+                                    <img class="header__bottom-link__img" src="images/icons/facebook.svg" alt="">
+                                </a>
+                            </li>
+                            <li class="header__bottom-item">
+                                <a class="header__bootom-link" href="#">
+                                    <img class="header__bottom-link__img" src="images/icons/instagram.svg" alt="">
+                                </a>
+                            </li>
+                            <li class="header__bottom-item">
+                                <a class="header__bootom-link" href="#">
+                                    <img class="header__bottom-link__img" src="images/icons/telegram.svg" alt="">
+                                </a>
+                            </li>
+                        </ul>
+                        <p class="header__bottom-text">Cтворено в <span>JetUp</span></p>
+                    </div>
                 </div>
             </div>
         </div>
     </header>
+    <div id="popup" class="popup">
+        <div class="popup__body">
+            <div class="popup__content">
+                <a href="#header" class="popop__close close-popup">
+                    <img class="popup__close-img" src="images/icons/close.svg" alt="">
+                </a>
+                <form action="#" id="form" class="popup__form">
+                    <h3 class="popup__title">
+                        Стати партнером
+                    </h3>
+                    <input class="popup__input _req" type="name" name="name" placeholder="Ім'я" required>
+                    <input class="popup__input _req" type="text" name="surname" placeholder="Прізвище" required>
+                    <input class="popup__input _req" type="text" name="phone" placeholder="Номер телефону" required>
+                    <input class="popup__input _req" type="text" name="business" placeholder="Назва бізнесу" required>
+                    <button class="popup__btn btn submit" type="submit">Відправити</button>
+                </form>
+                <img class="popup__img" src="images/icons/hidden-phone.svg" alt="">
+            </div>
+        </div>
+    </div>
+    <div id="popup__detail" class="popup__detail">
+        <div class="popup__detail-body">
+            <div class="popup__detail-content">
+                <a href="#header" class="popop__close">
+                    <img class="popup__close-img" src="images/icons/close.svg" alt="">
+                </a>
+                <div class="popup__detail-desc">
+                    <h4 class="popup__detail-title">
+                        Оплата готівкою
+                    </h4>
+                    <p class="popup__detail-text">
+                        Оплата виконується кур’єру при отриманні замовлення. <br>
+                        Прохання перевіряти коректність здачі в присутності кур'єра.
+                    </p>
+                    <p class="popup__detail-text">
+                        При оформленні замовлення можете вибрати доступний і зручний
+                        для Вас інтервал доставки. При великій кількості замовлень
+                        можливі затримки в доставці.
+                    </p>
+                    <p class="popup__detail-text">
+                        Автомобілі служби доставки обладнані для перевезення продуктів
+                        харчування, тому заморожені овочі не стануть, а охолоджена риба
+                        - не нагріється, навіть якщо водій потрапить в пробку.
+                    </p>
+                    <p class="popup__detail-text">
+                        Get Goods - це максимально зручні і прості умови оформлення
+                        попереднього замовлення, доставки продуктів і їх оплати.
+                    </p>
+                </div>
+                <img class="popup__img" src="images/icons/popup-details.svg" alt="">
+            </div>
+        </div>
+    </div>
     <main class="main">
         <section class="top">
             <div class="container">
@@ -89,7 +169,7 @@
                         </div>
                         <div class="advantages__item">
                             <img class="advantages__img" src="images/icons/advantages-4.svg" alt="">
-                            <p class="advantages__text"><span>Знижки та акції</span> від наших партнерів</p>
+                            <p class="advantages__text advantages__text-last"><span>Знижки та акції</span> від наших партнерів</p>
                         </div>
                     </div>
                 </div>
@@ -108,16 +188,25 @@
                         </p>
                         <div class="work__items">
                             <div class="work__item work__item-one">
-                                <p class="work__item-title">Ви робите замовлення</p>
-                                <p class="work__item-text">Вибираєте бажані товари та час доставки</p>
+                                <img class="work__item-img" src="images/icons/work-1.svg" alt="">
+                                <div class="work__item-desc">
+                                    <p class="work__item-title">Ви робите замовлення</p>
+                                    <p class="work__item-text">Вибираєте бажані товари та час доставки</p>
+                                </div>
                             </div>
                             <div class="work__item work__item-two">
-                                <p class="work__item-title">Менеджер опрацьовує замовлення</p>
-                                <p class="work__item-text">Менеджер формує замовлення та передає його дистрибютору</p>
+                                <img class="work__item-img" src="images/icons/work-2.svg" alt="">
+                                <div class="work__item-desc">
+                                    <p class="work__item-title">Менеджер опрацьовує замовлення</p>
+                                    <p class="work__item-text">Менеджер формує замовлення та передає його дистрибютору</p>
+                                </div>
                             </div>
                             <div class="work__item work__item-three">
-                                <p class="work__item-title">Кур’єр доставляє замовлення</p>
-                                <p class="work__item-text">Вже наступного дня Ви зможете отримуєте своє замовлення </p>
+                                <img class="work__item-img" src="images/icons/work-3.svg" alt="">
+                                <div class="work__item-desc">
+                                    <p class="work__item-title">Кур’єр доставляє замовлення</p>
+                                    <p class="work__item-text">Вже наступного дня Ви зможете отримуєте своє замовлення </p>
+                                </div>
                             </div>
                         </div>
                         <div class="app__box">
@@ -128,7 +217,6 @@
                                 <img src="images/icons/play-big.svg" alt="img">
                             </a>
                         </div>
-                        
                     </div>
                 </div>
             </div>
@@ -183,8 +271,6 @@
                             Ми пропонуємо доставку продуктів та товарів у ваші
                             магазини, а також повний супровід  у цьому напрямку,
                             від моменту замовлення до отримання у магазині.
-
-
                         </p>
                         <p class="about__text">
                             Всі товари і послуги компанії сертифіковані.
@@ -197,9 +283,9 @@
                             Почни свій бізнес разом з нами, щоб автоматизувати
                             його та бути на крок попереду.
                         </p>
-                        <button class="partner-btn about__btn">Стати партнером</button>
+                        <a class="partner-btn about__btn" href="#popup">Стати партнером</a>
                     </div>
-                    <img src="images/about.png" alt="about img">
+                    <img class="about__img" src="images/about.png" alt="about img">
                 </div>
             </div>
         </section>
@@ -219,7 +305,7 @@
                                 Оплата виконується кур’єру при отриманні замовлення.
                                 Прохання перевіряти коректність здачі в присутності кур'єра.
                             </p>
-                            <button class="details-btn btn">Детальніше</button>
+                            <a class="details-btn btn" href="#popup__detail">Детальніше</a>
                         </div>
                     </div>
                 </div>
@@ -235,6 +321,10 @@
                         </h3>
                         <p class="aside__text">
                             Встановлюйте мобільний додаток <span>GetGoods</span> та зробіть
+                            Ваш бізнес ще більш простим та зручним
+                        </p>
+                        <p class="aside__text-mobil">
+                            Встановлюйте мобільний додаток GetGoods та зробіть
                             Ваш бізнес ще більш простим та зручним
                         </p>
                         <div class="app__box">
@@ -339,7 +429,10 @@
             </div>
             <div class="footer__bottom">
                 <p class="footer__bottom-text">Cтворено в <span>JetUp</span></p>
-                <p class="footer__bottom-copy">2021 Get Goods.ua Всі права захищені</p>
+                <div class="footer__bottom-copy">
+                    <img class="footer__bottom-img" src="images/icons/copy.svg" alt="">
+                    <p class="footer__bottom-copy__text">2021 Get Goods.ua Всі права захищені</p>
+                </div>
                 <ul class="footer__bottom-box">
                     <li class="footer__bottom-item">
                         <a class="footer__bootom-link" href="#">
@@ -361,7 +454,7 @@
         </div>
     </footer>
 
-
+    <script src="js/popup.js"></script>
     <script src="js/main.min.js"></script>
 </body>
 </html>
