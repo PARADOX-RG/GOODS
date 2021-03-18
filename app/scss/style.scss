@@ -23,7 +23,7 @@
     &__box{
         display: flex;
         .partner-btn{
-            margin-left: 82px;
+            margin-left: 66px;
         }
     }
     &__close{
@@ -54,16 +54,14 @@
             &:hover{
                 color: #000;
                 opacity: 1;
-                text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
                 &::before{
                     content: '';
                     position: absolute;
-                    left: 40%;
+                    left: 36%;
                     right: 50%;
-                    bottom: -10px;
+                    bottom: 0;
                     border-bottom: 2px solid #FF4C02;
                     width: 20px;
-                    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
                 }
             }
         }
@@ -71,19 +69,18 @@
             color: #000;
             opacity: 1;
             position: relative;
-            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
             &::before{
                 content: '';
                 position: absolute;
-                left:40%;
+                left: 36%;
                 right: 40%;
-                bottom: -10px;
+                bottom: 0;
                 border-bottom: 2px solid #FF4C02;
                 width: 20px;
             }
         }
         .header__menu-item + .header__menu-item{
-            margin-left: 25px;
+            margin-left: 28px;
         }
     }
     &__bottom-box{
@@ -99,20 +96,26 @@
     &__top{
         display: flex;
         justify-content: space-between;
-        padding: 50px 60px 56px;
+        padding: 49px 60px 30px;
         border-bottom: 1px solid #dadada;
+        &-logo{
+            margin-right: 138px;
+        }
         &-item__link{
-            @extend %gilroy-600;
+            @extend %gilroy-500;
             font-size: 16px;
             line-height: 19px;
             color: #5a5a5a;
-
+            &:hover{
+                text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            }
         }
         &-item{
             padding-top: 8px;
+            margin-right: 10px;
         }
         &-item + .footer__top-item{
-            margin-top: 12px;
+            margin-top: 7px;
         }
         &-box{
             display: flex;
@@ -126,6 +129,7 @@
             width: 125px;
             height: 37px;
             margin-top: 9px;
+            margin-left: 10px;
         }
     }
     &__bottom{
@@ -153,17 +157,9 @@
                 font-size: 12px;
                 line-height: 14px;
             }
-            // position: relative;
-            // &::before{
-            //     content: '';
-            //     position: absolute;
-            //     background-image: url('../images/icons/copy.svg');
-            //     background-repeat: no-repeat;
-            //     left: -10px;
-            //     top: 4px;
-            //     width: 8px;
-            //     height: 8px;
-            // }
+        }
+        &-link__img{
+            opacity: 0.8;
         }
         &-box{
             display: flex;
@@ -176,7 +172,7 @@
 
 .top{
     margin-top: 100px;
-    padding: 196px 60px;
+    padding: 196px 60px 60px;
     background-image: url('../images/icons/top-bg.svg');
     background-repeat: no-repeat;
     background-position: top center;
@@ -189,17 +185,17 @@
     }
     &__title{
         @extend %gilroy-600;
-        font-size: 40px;
+        font-size: 36px;
         line-height: 48px;
         letter-spacing: 0.02em;
-        margin-bottom: 30px;
+        margin-bottom: 26px;
     }
     &__subtitle{
         @extend %gilroy-500;
         font-size: 22px;
         line-height: 140%;  
         color: #484848;
-        margin-bottom: 30px;
+        margin-bottom: 23px;
     }
     &__img{
         margin-top: -130px;
@@ -221,7 +217,7 @@
         margin: 0 auto;
     }
     &__item{
-        width: 220px;
+        width: 100%;
         height: 250px;
         box-shadow: 0px 0px 4.84956px rgba(71, 71, 71, 0.1);
         display: flex;
@@ -232,6 +228,9 @@
         cursor: pointer;
         &:hover{
             box-shadow: 0px 2.90973px 24.2478px rgba(71, 71, 71, 0.1);
+        }
+        & + .advantages__item{
+            margin-left: 70px;
         }
     }
     &__img{
@@ -269,7 +268,7 @@
     }
     &__title{
         @extend %gilroy-600;
-        font-size: 38px;
+        font-size: 35px;
         line-height: 45px;
         padding-top: 120px;
         margin-bottom: 30px;
@@ -314,7 +313,7 @@
     background-repeat: no-repeat;
     background-position: center center;
     &__inner{
-        padding: 0 60px 100px;
+        padding: 0 160px 100px;
     }
     
     &__title{
@@ -322,30 +321,32 @@
     }
     &__content{
         display: flex;
-        justify-content: space-between;
+    }
+    &__item + .info__item{
+        margin-left: 63px;
     }
     &__item{
-        max-width: 250px;
+        max-width: 225px;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         text-align: center;
-        // position: relative;
+        position: relative;
         &:last-child{
             &::after{
                 display: none;
             }
         }
-        // &::after{
-        //     content: '';
-        //     position: absolute;
-        //     background-image: url('../images/icons/angel-right.svg');
-        //     width: 12px;
-        //     height: 20px;
-        //     right: -60px;
-        //     top: 45px;
-        // }
+        &::after{
+            content: '';
+            position: absolute;
+            background-image: url('../images/icons/angel-right.svg');
+            width: 12px;
+            height: 20px;
+            right: -40px;
+            top: 43px;
+        }
         &-img{
             width: auto;
             height: auto;
@@ -354,7 +355,7 @@
         }
         &-text{
             @extend %gilroy-500;
-            font-size: 20px;
+            font-size: 17px;
             line-height: 24px;
             span{
                 @extend %gilroy-700;
@@ -378,14 +379,16 @@
         margin-top: 140px;
     }
     &__title{
-        margin-bottom: 30px;
+        margin-bottom: 20px;
         @extend %gilroy-600;
-        font-size: 38px;
+        font-size: 37px;
         line-height: 45px;
     }
     &__text{
         line-height: 29px;
-        margin-bottom: 20px;
+        margin-bottom: 11px;
+        opacity: 0.9;
+        font-size: 21px;
     }
     &__text:nth-child(4){
         line-height: 29px;
@@ -393,9 +396,10 @@
     }
     &__btn{
         margin-top: 32px;
+        padding: 15px 21px;
     }
     &__img{
-        max-width: 50%;
+        max-width: 44%;
     }
 }
 
@@ -414,14 +418,21 @@
     }
     &__item{
         max-width: 570px;
-        padding: 30px;
-        box-shadow: 0px 3px 25px rgba(71, 71, 71, 0.1);
+        padding: 30px 30px 45px;
+        box-shadow: 0px 0px 5px rgba(71, 71, 71, 0.1);
         border-radius: 12px;
+        &:hover{
+            box-shadow: 0px 3px 25px rgba(71, 71, 71, 0.1);
+        }
         &-title{
-            margin: 25px 0;
+            margin: 26px 0;
+            font-size: 26px;
         }
         &-text{
-            margin-bottom: 30px;
+            margin-bottom: 39px;
+            opacity: 0.9;
+            font-size: 18px;
+            line-height: 23px;
         }
     }
     &-btn{
@@ -449,12 +460,12 @@
         @extend %gilroy-600;
         font-size: 38px;
         line-height: 45px;
-        margin-bottom: 40px;
+        margin-bottom: 32px;
     }
     &__text{
         font-size: 22px;
         line-height: 31px;
-        margin-bottom: 40px;
+        margin-bottom: 28px;
         span{
             @extend %gilroy-600;
         }
@@ -468,7 +479,7 @@
 }
 
 .partners{
-    padding: 110px 60px;
+    padding: 92px 60px 109px;
     &__title{
         margin-bottom: 77px;
     }
@@ -488,22 +499,25 @@
     .slick-dots{
         display: flex;
         justify-content: center;
-        margin-top: 80px;
+        margin-top: 64px;
     }
     .slick-slide img{
         margin: 0 auto;
     }
     li{ 
         button{
+            @extend%gilroy-500;
             font-size: 0;
             opacity: 0.2;
             background-color: #333;
-            width: 8px;
+            width: 8px !important;
+            max-width: 8px !important;
             height: 8px;
             border: none;
             border-radius: 50%;
             margin-left: 12px; 
             cursor: pointer;
+            padding: 0;
         }
         &.slick-active{
             button{
@@ -515,7 +529,7 @@
                 background-color:#FF741C;
                 outline: none;
                 border: none;
-                
+                padding: 1px 6px;
             }
         }
     }
@@ -604,10 +618,14 @@
         margin-bottom: 10px;
         border-radius: 7px;
         border: 1px solid #333333;
+        &:focus{
+            outline: none;
+        }
     }
     &__btn{
         padding: 11px 39px;
         margin-top: 10px;
+        border: none;
     }
     &__img{
         margin-left: 35px;

@@ -34,13 +34,13 @@ body{
     }
 }
 .partner-btn{
-    @extend %gilroy-600;
+    @extend %gilroy-500;
     color: #fff;
     font-size: 16px;
     line-height: 19px;
     background: linear-gradient(50.16deg, #FF2A00 5.83%, #FF9900 100%);
     padding: 11px 15px;
-    border: 1px solid #000;
+    border: none;
     border-radius: 10px;
 }
 .app__box{
@@ -48,7 +48,7 @@ body{
     margin-left: -8px;
     &-link__play{
         margin-top: 9px;
-        margin-left: 50px;
+        margin-left: 40px;
     }
 }
 .btn{
@@ -58,7 +58,7 @@ body{
     line-height: 19px;
     background: linear-gradient(50.16deg, #FF2A00 5.83%, #FF9900 100%);
     padding: 11px 15px;
-    border: 1px solid #000;
+    border: none;
     border-radius: 10px;
     cursor: pointer;
 }
@@ -73,7 +73,7 @@ body{
 @media (max-width: 1100px){
     .partner-btn{
         margin-bottom: 20px;
-        
+        padding: 11px 25px;
     }
 }
 @media (max-width: 800px){
